@@ -17,8 +17,8 @@ Description: The package estimates the area of a shape S and plots the shape.
         to plot the shape (using the constraints) and the data points. Data points which have a value TRUE (i.e lie within the shape)
         are in red and data points which have a value FALSE (i.e. lie outside the shape) are in blue.
 Imports: 
-        stats,
-        ggplot2
+        stats::runif(),
+        ggplot2::ggplot()
 Suggests:
         dplyr
 Encoding: UTF-8
