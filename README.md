@@ -1,4 +1,6 @@
-# 'Package: pkghw4g6
+area {pkghw4g6}
+
+# Estimate and plot the area of a shape
 
 pkghw4g6 allows to estimate the area of a shape and plot the shape S in two steps. This package requires the packages *stats* and *ggplot2*.
 
