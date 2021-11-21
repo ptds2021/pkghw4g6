@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 .Rproj.user
 .Rhistory
 .RData
@@ -43,4 +43,4 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
->>>>>>> 5136dce2d855672b65644a10c7563e8aadcae89a
+
