@@ -1,7 +1,8 @@
 Package: pkghw4g6
-Type: Package
-Title: Estimate and plot the area of a shape
 Version: 0.1.0
+Type: Package
+Date: 2021-11-22
+Title: Estimate and plot the area of a shape
 Authors@R: c(
     person("Virany", "Kho", email = "virany.kho@unil.ch", role = c("aut", "cre"))person("Colin", "Steffe", email = "colin.steffe@unil.ch", role = c("aut", "cre")),  
     person("Guillaume", "Bilocq", email = "guillaume.bilocq@unil.ch", role = c("aut", "cre")), 
