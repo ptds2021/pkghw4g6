@@ -2,25 +2,23 @@ Package: pkghw4g6
 Type: Package
 Title: Estimate and plot the area of a shape
 Version: 0.1.0
-Authors: c(person("Virany", "Kho", email = "virany.kho@unil.ch", role = c("aut", "cre")),
-           person("Colin", "Steffe", email = "colin.steffe@unil.ch", role = c("aut", "cre")),  
-           person("Guillaume", "Bilocq", email = "guillaume.bilocq@unil.ch", role = c("aut", "cre")), 
-           person("Daniel", "Welz", email = "daniel.welz@unil.ch", role = c("aut", "cre")),  
-           person("Jasmine", "Mawjee", email = "daniel.welz@unil.ch", role = c("aut", "cre")))
-Maintainer: <https://github.com/ptds2021/pkghw4g6>
+Authors@R: c(
+    person("Virany", "Kho", email = "virany.kho@unil.ch", role = c("aut", "cre"))person("Colin", "Steffe", email = "colin.steffe@unil.ch", role = c("aut", "cre")),  
+    person("Guillaume", "Bilocq", email = "guillaume.bilocq@unil.ch", role = c("aut", "cre")), 
+    person("Daniel", "Welz", email = "daniel.welz@unil.ch", role = c("aut", "cre")),  
+    person("Jasmine", "Mawjee", email = "daniel.welz@unil.ch", role = c("aut", "cre")))
+Maintainer: Group 6 <https://github.com/ptds2021/pkghw4g6>
 Description: The package estimates the area of a shape S and plots the shape. 
-        To estimate the area of the shape, the function estimate_area() simulates B random data points (or coordinates (x,y)) 
-        in a one by one square and assigns to each data point a value TRUE or FALSE whether it falls within the lines
-        of the shape (i.e. within contraints) or not. Using the data points for which the assigned value is TRUE,
-        we estimate the area of the shape by summing all TRUE values and divide them by the total number of data points 
-        (i.e. B parameter). Once the area is estimated and returned, the plot_area() function takes the value as only argument 
-        to plot the shape (using the constraints) and the data points. Data points which have a value TRUE (i.e lie within the shape)
-        are in red and data points which have a value FALSE (i.e. lie outside the shape) are in blue.
+    To estimate the area of the shape, the function estimate_area() simulates B random data points (or coordinates (x,y)) 
+    in a one by one square and assigns to each data point a value TRUE or FALSE whether it falls within the lines
+    of the shape (i.e. within contraints) or not. Using the data points for which the assigned value is TRUE,
+    we estimate the area of the shape by summing all TRUE values and divide them by the total number of data points 
+    (i.e. B parameter). Once the area is estimated and returned, the plot_area() function takes the value as only argument 
+    to plot the shape (using the constraints) and the data points. Data points which have a value TRUE (i.e lie within the shape)
+    are in red and data points which have a value FALSE (i.e. lie outside the shape) are in blue.
 Imports: 
         stats,
         ggplot2
-Suggests:
-        dplyr
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.2
