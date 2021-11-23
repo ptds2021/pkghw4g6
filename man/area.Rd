@@ -6,11 +6,10 @@
 #'
 #' @param B number of random data points (x,y) to generate
 #' @param seed initializes a pseudorandom number generator
-#' @param x return value from the estimation of the area of the shape 
-#' 
+#' @param x return value from the estimation of the area of the shape
+#'
 #' @return plot of the shape S and the simulated data points (within the shape and outside the shape)
-#' 
-#' @example
-#' area()
+#'
+#' @example area()
 #'
 #' @export

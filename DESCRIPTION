@@ -4,7 +4,7 @@ Title: Estimate and plot the area of a shape
 Version: 0.1.0
 Authors@R: c(
     person("Virany", "Kho", email = "virany.kho@unil.ch", role = "aut"),
-    person("Colin", "Steffe", email = "colin.steffe@unil.ch", role = c("aut", "cre")),  
+    person("Colin", "Steffe", email = "colin.steffe@unil.ch", role = "cre"),  
     person("Guillaume", "Bilocq", email = "guillaume.bilocq@unil.ch", role = "aut"), 
     person("Daniel", "Welz", email = "daniel.welz@unil.ch", role = "aut"),  
     person("Jasmine", "Mawjee", email = "daniel.welz@unil.ch", role = "aut"))
