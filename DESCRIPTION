@@ -7,7 +7,7 @@ Authors@R: c(
     person("Colin", "Steffe", email = "colin.steffe@unil.ch", role = "cre"),  
     person("Guillaume", "Bilocq", email = "guillaume.bilocq@unil.ch", role = "aut"), 
     person("Daniel", "Welz", email = "daniel.welz@unil.ch", role = "aut"),  
-    person("Jasmine", "Mawjee", email = "daniel.welz@unil.ch", role = "aut"))
+    person("Jasmine", "Mawjee", email = "jasmine.mawjee@unil.ch", role = "aut"))
 Maintainer: Colin Steffe <colin.steffe@unil.ch>
 Description: The package estimates the area of a shape S and plots the shape. 
     To estimate the area of the shape, the function estimate_area() simulates B random data points (or coordinates (x,y)) 
