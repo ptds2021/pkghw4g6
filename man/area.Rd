@@ -1,104 +1,14 @@
 \name{Estimation and plot of a shape area}
 \title{Estimate and plot the area of a shape}
-#' @description Estimates and plots the area of a shape S by simulating random coordinates in a one by one square
-#' @authors Virany Kho, Colin Steffe, Guillaume Bilocq, Daniel Welz and Jasmine Mawjee
-#' @param B \code{numeric} number of random data points (x,y) to generate
-#' @param seed \code{numeric} initializes a pseudorandom number generator
-#' @param x \code{numeric} return value from the estimation of the area of the shape
-#' @return plot of the shape S and the simulated data points (within the shape and outside the shape)
-#' @example area()
-#' @export
-estimate_area <- function(B = 5000, seed = 10){
-
-  # Control seed
-  set.seed(seed)
-
-  # Simulate B points
-  points <- data.frame(
-    x = runif(n = B, min = 0, max = 1),
-    y = runif(n = B, min = 0, max = 1),
-    inside = rep(NA,B)
-  )
-
-  # Create a vector Z and a loop
-  Z <- logical()
-
-  for (i in 1:nrow(points)){
-
-    x <- points[i,1]
-    y <- points[i,2]
-
-    if (x^2 + y^2 > 0.5^2 & (x-0.5)^2 +(y-0.5)^2 < 0.5^2 &  y > x - 0.5 ){
-
-      Z[i] =  1  # true if a data point lies in the shape
-      points[i,3] = TRUE
-
-    }else{
-
-      Z[i] = 0  # false if data points doesn't lie in the shape
-      points[i,3] = FALSE
-
-    }
-  }
-
-  # Compute area of shape
-  area_square <- 1*1
-  estimated_area <- area_square * (sum(Z)/B)
-
-  # Create a structure with class "area"
-  rval <- structure(
-    list(
-      estimated_area = estimated_area,
-      points = points),
-    class = "area"
-  )
-
-  # typeof(rval) # list
-
-  return(rval)
-
+\description{Estimates and plots the area of a shape S by simulating random coordinates in a one by one square}
+\usage{
+estimate_area()
+plot.area()}
+\argument{
+  \item{B}{A number of random data points (x,y) to generate.}
+  \item{seed}{Initializes a pseudorandom number generator.}
+  \item{x}{Returns value from the estimation of the area of the shape.}
 }
+\return{Plot of the shape S and the simulated data points (within the shape and outside the shape).}
+\authors{Virany Kho, Colin Steffe, Guillaume Bilocq, Daniel Welz and Jasmine Mawjee}
 
-# Function that plots the shape
-plot.area <- function(x) {   # x is rval
-
-  x <- estimate_area()
-  points <- x[["points"]]
-
-  # plot points
-  library(ggplot2)
-  plot <- ggplot(data = points) +
-    geom_point(mapping = aes(x = points[,1],
-                             y = points[,2]),
-               alpha = 0.2) +
-    theme_bw() +
-    theme(panel.grid = element_line(linetype = "dashed",
-                                    color = "grey")) +
-    # Rename axes
-    xlab("x") +
-    ylab("y") +
-    # Plot frame around points
-    geom_hline(yintercept = c(0, 1),
-               linetype = "dashed",
-               color = "blue") +
-    geom_vline(xintercept = c(0, 1),
-               linetype = "dashed",
-               color = "blue") +
-    # Plot shape S
-    stat_function(fun = function(x) (sqrt(-(x^2) + 0.5^2)),  # D1
-                  color = "blue") +
-    stat_function(fun = function(x) (sqrt(0.5^2 - (x-0.5)^2) + 0.5), # D2
-                  color = "blue") +
-    stat_function(fun = function(x) x - 0.5, # D3
-                  color = "blue") +
-    # Removing negative area
-    scale_x_continuous(limits = c(0, 1)) +
-    scale_y_continuous(limits = c(0, 1)) +
-
-    # Adds data points
-    geom_point(aes(points$x,  points$y),
-               col = ifelse(points$inside == TRUE, "darkturquoise", "lightpink"))
-
-  plot
-
-}
