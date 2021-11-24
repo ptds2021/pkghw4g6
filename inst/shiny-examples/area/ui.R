@@ -13,31 +13,21 @@ library(shiny)
 shinyUI(fluidPage(
 
     # Application title
-    titlePanel("Area Estimation"),
+    titlePanel("Old Faithful Geyser Data"),
 
     # Sidebar with a slider input for number of bins
     sidebarLayout(
         sidebarPanel(
-            numericInput("seed",
-                         "Seed:",
-                         10,
-                         ),
-
-            sliderInput("B",
-                        "Number of Simulations:",
+            sliderInput("bins",
+                        "Number of bins:",
                         min = 1,
-                        max = 1000000,
-                        value = 5000000,
-                        step = 10,
-                        round = TRUE,
-                        )
-                    ),
+                        max = 50,
+                        value = 30)
+        ),
 
         # Show a plot of the generated distribution
         mainPanel(
-            plotOutput("plot"),
-            textOutput("time"),
-            textOutput("area")
+            plotOutput("distPlot")
         )
     )
 ))
