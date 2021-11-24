@@ -21,8 +21,6 @@ shinyUI(fluidPage(
             numericInput("seed",
                          "Seed:",
                          10,
-                         min = 1,
-                         max = 10
                          ),
 
             sliderInput("B",
