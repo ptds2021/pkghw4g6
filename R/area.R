@@ -93,3 +93,6 @@ plot.area <- function(x) {   # x is rval
                col = ifelse(points$inside == TRUE, "darkturquoise", "lightpink"))
   plot
 }
+
+usethis::use_testthat()
+
