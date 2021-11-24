@@ -96,3 +96,4 @@ plot.area <- function(x) {   # x is rval
 
 usethis::use_testthat()
 
+
