@@ -1,5 +1,5 @@
 #' @title Estimation of a shape area function
-#' @authors Virany Kho, Colin Steffe, Guillaume Bilocq, Daniel Welz and Jasmine Mawjee
+#' @author Virany Kho, Colin Steffe, Guillaume Bilocq, Daniel Welz and Jasmine Mawjee
 #' @description Estimates the area of a shape S by simulating random coordinates in a one by one square.
 #' @param B A number of random data points (x,y) to generate.
 #' @param seed Initializes a pseudorandom number generator.
@@ -48,7 +48,7 @@ estimate_area <- function(B = 5000, seed = 10){
 
 
 #' @title Plotting of a shape area function
-#' @authors Virany Kho, Colin Steffe, Guillaume Bilocq, Daniel Welz and Jasmine Mawjee
+#' @author Virany Kho, Colin Steffe, Guillaume Bilocq, Daniel Welz and Jasmine Mawjee
 #' @description Plots the area of a shape S by simulating random coordinates in a one by one square.
 #' @param x The return value from the estimation of the area of the shape function.
 #' @return Plot of the shape S and the simulated data points (within the shape and outside the shape).
