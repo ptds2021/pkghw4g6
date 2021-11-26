@@ -1,4 +1,5 @@
-\name{Estimation and plot of a shape area}
+\name{Area}
+\alias{Area}
 \title{Estimate and plot the area of a shape}
 \description{Estimates and plots the area of a shape S by simulating random coordinates in a one by one square}
 \usage{
