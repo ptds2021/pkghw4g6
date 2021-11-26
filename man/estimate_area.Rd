@@ -2,6 +2,7 @@
 % Please edit documentation in R/area.R
 \name{estimate_area}
 \alias{estimate_area}
+\alias{estimate_area,plot.area}
 \title{Estimation of a shape area function}
 \usage{
 estimate_area(B = 5000, seed = 10)
@@ -18,7 +19,7 @@ Estimation of the area of the shape S.
 Estimates the area of a shape S by simulating random coordinates in a one by one square.
 }
 \examples{
-estimate_area(B = 5000, seed = 10)
+/inst/examples/examples.R
 }
 \author{
 Virany Kho, Colin Steffe, Guillaume Bilocq, Daniel Welz and Jasmine Mawjee
