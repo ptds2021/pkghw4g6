@@ -1,4 +1,4 @@
-Package: pkghw4v2
+Package: pkghw4g6
 Type: Package
 Title: Estimate and plot the area of a shape
 Version: 0.1.0
@@ -34,4 +34,3 @@ LazyData: true
 URL: https://https://github.com/ptds2021/pkghm4g6
 RoxygenNote: 7.1.2
 VignetteBuilder: knitr
-Config/testthat/edition: 3

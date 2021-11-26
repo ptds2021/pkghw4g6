@@ -116,8 +116,3 @@ plot <- function(x) {   # x is rval
                                      "lightpink"))
 
 }
-
-
-usethis::use_testthat()
-
-
