@@ -5,7 +5,7 @@
 #' @param seed Initializes a pseudorandom number generator.
 #' @return Estimation of the area of the shape S.
 #' @examples
-#' estimate_area(B = 3456, seed = 10)
+#' estimate_area(B = 5000, seed = 10)
 #' @aliases estimate_area,plot.area
 #' @export
 # Copy the functions from problem 1

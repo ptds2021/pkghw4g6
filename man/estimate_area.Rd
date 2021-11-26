@@ -19,7 +19,7 @@ Estimation of the area of the shape S.
 Estimates the area of a shape S by simulating random coordinates in a one by one square.
 }
 \examples{
-estimate_area(B = 3456, seed = 10)
+estimate_area(B = 5000, seed = 10)
 }
 \author{
 Virany Kho, Colin Steffe, Guillaume Bilocq, Daniel Welz and Jasmine Mawjee
