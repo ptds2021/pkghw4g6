@@ -4,11 +4,10 @@
 \usage{
 estimate_area()
 plot.area()}
-\argument{
-  \item{B}{A number of random data points (x,y) to generate.}
-  \item{seed}{Initializes a pseudorandom number generator.}
-  \item{x}{Returns value from the estimation of the area of the shape.}
+\arguments{
+\item{B}{A number of random data points (x,y) to generate.}
+\item{seed}{Initializes a pseudorandom number generator.}
+\item{x}{Returns value from the estimation of the area of the shape.}
 }
-\return{Plot of the shape S and the simulated data points (within the shape and outside the shape).}
-\authors{Virany Kho, Colin Steffe, Guillaume Bilocq, Daniel Welz and Jasmine Mawjee}
+
 
