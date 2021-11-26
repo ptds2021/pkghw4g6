@@ -15,8 +15,8 @@ estimate_area <- function(B = 5000, seed = 10){
   set.seed(seed)
   # Simulate B points
   points <- data.frame(
-    x = runif(n = B, min = 0, max = 1),
-    y = runif(n = B, min = 0, max = 1),
+    x = stats::runif(n = B, min = 0, max = 1),
+    y = stats::runif(n = B, min = 0, max = 1),
     inside = rep(NA,B)
   )
   # Create a vector Z and a loop
@@ -63,18 +63,18 @@ plot.area <- function(x, ...) {   # x is rval
   library(ggplot2)
   plot <- ggplot2::ggplot(data = points) +
 
-          ggplot2::geom_point(mapping = aes(x = points[,1],
-                                            y = points[,2]),
-                                            alpha = 0.2) +
+          ggplot2::geom_point(mapping = ggplot2::aes(x = points[,1],
+                                                     y = points[,2]),
+                                                     alpha = 0.2) +
 
           ggplot2::theme_bw() +
 
-          ggplot2::theme(panel.grid = element_line(linetype = "dashed",
-                                                   color = "grey")) +
+          ggplot2::theme(panel.grid = ggplot2::element_line(linetype = "dashed",
+                                                            color = "grey")) +
 
           # Rename axes
-          xlab("x") +
-          ylab("y") +
+          ggplot2::xlab("x") +
+          ggplot2::ylab("y") +
 
           # Plot frame around points
           ggplot2:: geom_hline(yintercept = c(0, 1),
@@ -100,7 +100,7 @@ plot.area <- function(x, ...) {   # x is rval
           ggplot2::scale_y_continuous(limits = c(0, 1)) +
 
           # Adds data points
-          ggplot2::geom_point(aes(points$x,  points$y),
+          ggplot2::geom_point(ggplot2::aes(points$x,  points$y),
                               col = ifelse(points$inside == TRUE,
                                            "darkturquoise",
                                            "lightpink"))

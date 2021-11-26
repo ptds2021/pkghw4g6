@@ -4,7 +4,7 @@
 \alias{plot.area}
 \title{Plotting of a shape area function}
 \usage{
-\method{plot}{area}(x)
+\method{plot}{area}(x, ...)
 }
 \arguments{
 \item{x}{The return value from the estimation of the area of the shape function.}

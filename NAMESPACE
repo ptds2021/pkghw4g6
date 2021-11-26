@@ -2,4 +2,3 @@
 
 S3method(plot,area)
 export(estimate_area)
-importFrom("stats", "runif")
