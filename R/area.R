@@ -6,8 +6,8 @@
 #' @return Estimation of the area of the shape S.
 #' @examples
 #' estimate_area(B = 5000, seed = 10)
-#' @aliases estimate_area,plot.area
 #' @export
+#' @aliases estimate_area,plot.area
 # Copy the functions from problem 1
 # Function that estimates the area of the shape
 # Create a function approximating the area S
