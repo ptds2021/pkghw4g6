@@ -53,7 +53,7 @@ estimate_area <- function(B = 5000, seed = 10){
 #' @param x The return value from the estimation of the area of the shape function.
 #' @return Plot of the shape S and the simulated data points (within the shape and outside the shape).
 #' @examples
-#' plot.area(0.5672)
+#' plot.area(estimate_area(B = 1000, seed = 10))
 #' @export
 # Function that plots the shape
 plot.area <- function(x) {   # x is rval
