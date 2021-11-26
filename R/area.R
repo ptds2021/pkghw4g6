@@ -4,8 +4,8 @@
 #' @param B A number of random data points (x,y) to generate.
 #' @param seed Initializes a pseudorandom number generator.
 #' @return Estimation of the area of the shape S.
-#' @examples
-#' estimate_area(B = 5000, seed = 10)
+#' @example /inst/examples/examples.R
+#'
 #' @export
 # Copy the functions from problem 1
 # Function that estimates the area of the shape
