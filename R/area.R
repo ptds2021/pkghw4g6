@@ -1,16 +1,12 @@
 #' @title Estimation of a shape area function
-#' @author Virany Kho, Colin Steffe, Guillaume Bilocq, Daniel Welz and Jasmine Mawjee
 #' @description Estimates the area of a shape S by simulating random coordinates in a one by one square.
-#' @param B A number of random data points (x,y) to generate.
-#' @param seed Initializes a pseudorandom number generator.
+#' @param B Number of random data points (x,y) to generate.
+#' @param seed Pseudorandom number generator.
 #' @return Estimation of the area of the shape S.
 #' @examples
 #' estimate_area(B = 5000, seed = 10)
-#' @export
 #' @aliases estimate_area,plot.area
-# Copy the functions from problem 1
-# Function that estimates the area of the shape
-# Create a function approximating the area S
+#' @export
 estimate_area <- function(B = 5000, seed = 10){
   # Control seed
   set.seed(seed)
@@ -49,14 +45,12 @@ estimate_area <- function(B = 5000, seed = 10){
 
 
 #' @title Plotting of a shape area function
-#' @author Virany Kho, Colin Steffe, Guillaume Bilocq, Daniel Welz and Jasmine Mawjee
-#' @description Plots the area of a shape S by simulating random coordinates in a one by one square.
-#' @param x The return value from the estimation of the area of the shape function.
-#' @return Plot of the shape S and the simulated data points (within the shape and outside the shape).
+#' @description Plot the area of a shape S by simulating random coordinates in a one by one square.
+#' @param x Return value from the estimation of the area of the shape function.
+#' @return Shape S and the simulated data points (within the shape and outside the shape).
 #' @examples
 #' plot.area(estimate_area(B = 1000, seed = 10))
 #' @export
-# Function that plots the shape
 plot.area <- function(x) {   # x is rval
   x <- estimate_area()
   points <- x[["points"]]
