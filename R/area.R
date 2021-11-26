@@ -61,37 +61,51 @@ plot.area <- function(x, ...) {   # x is rval
   points <- x[["points"]]
   # plot points
   library(ggplot2)
-  plot <- ggplot(data = points) +
-    geom_point(mapping = aes(x = points[,1],
-                             y = points[,2]),
-               alpha = 0.2) +
-    theme_bw() +
-    theme(panel.grid = element_line(linetype = "dashed",
-                                    color = "grey")) +
-    # Rename axes
-    xlab("x") +
-    ylab("y") +
-    # Plot frame around points
-    geom_hline(yintercept = c(0, 1),
-               linetype = "dashed",
-               color = "blue") +
-    geom_vline(xintercept = c(0, 1),
-               linetype = "dashed",
-               color = "blue") +
-    # Plot shape S
-    stat_function(fun = function(x) (sqrt(-(x^2) + 0.5^2)),  # D1
-                  color = "blue") +
-    stat_function(fun = function(x) (sqrt(0.5^2 - (x-0.5)^2) + 0.5), # D2
-                  color = "blue") +
-    stat_function(fun = function(x) x - 0.5, # D3
-                  color = "blue") +
-    # Removing negative area
-    scale_x_continuous(limits = c(0, 1)) +
-    scale_y_continuous(limits = c(0, 1)) +
-    # Adds data points
-    geom_point(aes(points$x,  points$y),
-               col = ifelse(points$inside == TRUE, "darkturquoise", "lightpink"))
-  plot
+  plot <- ggplot2::ggplot(data = points) +
+
+          ggplot2::geom_point(mapping = aes(x = points[,1],
+                                            y = points[,2]),
+                                            alpha = 0.2) +
+
+          ggplot2::theme_bw() +
+
+          ggplot2::theme(panel.grid = element_line(linetype = "dashed",
+                                                   color = "grey")) +
+
+          # Rename axes
+          xlab("x") +
+          ylab("y") +
+
+          # Plot frame around points
+          ggplot2:: geom_hline(yintercept = c(0, 1),
+                         linetype = "dashed",
+                         color = "blue") +
+
+          ggplot2::geom_vline(xintercept = c(0, 1),
+                              linetype = "dashed",
+                              color = "blue") +
+
+          # Plot shape S
+          ggplot2::stat_function(fun = function(x) (sqrt(-(x^2) + 0.5^2)),  # D1
+                                 color = "blue") +
+
+          ggplot2::stat_function(fun = function(x) (sqrt(0.5^2 - (x-0.5)^2) + 0.5), # D2
+                                 color = "blue") +
+
+          ggplot2::stat_function(fun = function(x) x - 0.5, # D3
+                                 color = "blue") +
+
+          # Removing negative area
+          ggplot2::scale_x_continuous(limits = c(0, 1)) +
+          ggplot2::scale_y_continuous(limits = c(0, 1)) +
+
+          # Adds data points
+          ggplot2::geom_point(aes(points$x,  points$y),
+                              col = ifelse(points$inside == TRUE,
+                                           "darkturquoise",
+                                           "lightpink"))
+
+   plot
 }
 
 usethis::use_testthat()
