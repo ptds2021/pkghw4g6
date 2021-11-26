@@ -1,4 +1,4 @@
-Package: pkghw4g6
+Package: pkghw4v2
 Type: Package
 Title: Estimate and plot the area of a shape
 Version: 0.1.0
@@ -18,17 +18,20 @@ Description: The package estimates the area of a shape S and plots the shape.
     to plot the shape (using the constraints) and the data points. Data points which have a value TRUE (i.e lie within the shape)
     are in red and data points which have a value FALSE (i.e. lie outside the shape) are in blue.
 License: MIT + file LICENSE
-Encoding: UTF-8
-LazyData: true
-URL: https://https://github.com/ptds2021/pkghm4g6
+Depends: R (>= 3.3.1)
 Imports: 
     stats,
     ggplot2,
     shiny (>= 1.7.1)
-Depends: R (>= 3.3.1)
-RoxygenNote: 7.1.2
 Suggests: 
     utils,
     datasets,
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    knitr,
+    rmarkdown
+Encoding: UTF-8
+LazyData: true
+URL: https://https://github.com/ptds2021/pkghm4g6
+RoxygenNote: 7.1.2
+VignetteBuilder: knitr
 Config/testthat/edition: 3
