@@ -14,8 +14,8 @@ library(shiny)
 shinyServer(function(input, output) {
 
     simulate <- reactive({
-        rval.area <- estimate_area()[1]
-        time <- system.time()
+        rval.area <- estimate_area(B = input$B, seed = input$seed)[1]
+        time <- system.time(estimate_area(B = input$B, seed = input$seed))
 
     })
 
