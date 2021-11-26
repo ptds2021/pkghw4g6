@@ -34,3 +34,4 @@ LazyData: true
 URL: https://https://github.com/ptds2021/pkghm4g6
 RoxygenNote: 7.1.2
 VignetteBuilder: knitr
+Config/testthat/edition: 3
