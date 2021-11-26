@@ -7,28 +7,33 @@
 #    http://shiny.rstudio.com/
 #
 
+
+library(pkghw4g6)
 library(shiny)
 
 shinyServer(function(input, output) {
 
     simulate <- reactive({
-        # simulate the area of S and measure the time here
-        ...
+        rval.area <- estimate_area()[1]
+        time <- system.time()
+
     })
 
     output$plot <- renderPlot({
-        # plot area
-        ...
+        plot.area()
+
     })
 
     output$time <- renderText({
-        # extract the time of the execution
-        ...
+
+        paste0("The execution time is", time)
+
     })
 
     output$area <- renderText({
-        # extract the estimated value
-        ...
+
+        paste0("The area of S is", rval.area)
+
     })
 
 })
