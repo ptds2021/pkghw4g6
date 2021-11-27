@@ -34,3 +34,5 @@ shinyServer(function(input, output) {
         paste("execution time is :", simulate()[[2]][1])
     })
 })
+
+

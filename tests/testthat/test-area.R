@@ -6,12 +6,9 @@ test_that("pkghw4g6 works", {
 })
 
 # Test inputs provided
-#test_that("input check", {
-  #expect_error(estimate_area(B = 0, seed = 10))
-#})
+test_that("input check", {
+  expect_error(estimate_area(B = 0, seed = 10))
+})
 
-# Test inputs provided
-#test_that("input check", {
-  #expect_error(estimate_area(B = 1000, seed = 10))
-#})
+
 
