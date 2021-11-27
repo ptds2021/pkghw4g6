@@ -27,3 +27,4 @@ Then, it uses a second function plot_area() to plot the shape and the data point
 
 The plot object returns a graph with a one-by-one frame around B simulated data points and a shape drawn using the three constraints listed above. Data points are either in red within the limits of the shape or in blue outside the shape. 
 
+[![R-CMD-check](https://github.com/ptds2021/pkghw4g6/workflows/R-CMD-check/badge.svg)](https://github.com/ptds2021/pkghw4g6/actions)

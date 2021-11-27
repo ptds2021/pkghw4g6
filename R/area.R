@@ -75,7 +75,7 @@ estimate_area <- function(B = 5000, seed = 10){
 #' @return Shape S and the simulated data points (within the shape and outside the shape).
 #' @export
 #' @examples
-#' plot(x = estimate_area())
+#' plot_area(x = estimate_area())
 plot_area <- function(x) {   # x is rval
 
   x <- estimate_area()
