@@ -20,14 +20,13 @@ shinyUI(fluidPage(
         sidebarPanel(
             numericInput("seed",
                          "Seed:",
-                         10,
-                         ),
+                         10),
 
             sliderInput("B",
                         "Number of Simulations:",
                         min = 1,
                         max = 1000000,
-                        value = 5000000,
+                        value = 5000,
                         step = 10,
                         round = TRUE,
                         )

@@ -14,26 +14,16 @@ library(shiny)
 shinyServer(function(input, output) {
 
     simulate <- reactive({
-        rval.area <- estimate_area(B = input$B, seed = input$seed)
-        time <- system.time(estimate_area(B = input$B, seed = input$seed))
-
+        inputID <- list(input$B, input$seed)
+        estimate_area(inputID[1], inputID[2])
     })
 
     output$plot <- renderPlot({
-        plot(rval.area)
-
-    })
-
-    output$time <- renderText({
-
-        paste0("The execution time is : ", time)
-
+        plot(stimate_area(input$B, input$seed))
     })
 
     output$area <- renderText({
-
-        paste0("The area of S is : ", rval.area[[1]])
-
+        # extract the estimated value
+        paste("The are of the shape S is:", simulate()[1] )
     })
-
 })
