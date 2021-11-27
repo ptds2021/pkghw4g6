@@ -23,7 +23,7 @@ shinyUI(fluidPage(
                          10),
 
             sliderInput("B",
-                        "Number of Simulations:",
+                        "Number of data points",
                         min = 1,
                         max = 1000000,
                         value = 5000,
