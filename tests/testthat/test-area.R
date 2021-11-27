@@ -7,6 +7,5 @@ test_that("pkghw4g6 works", {
 
 # Test whether the estimate_area function returns a value and the data frame
 test_that("an error message is provided if wrong inputs", {
-  area <- pkghw4v2::estimate_area()
-  expect_condition_matching(area, "Error: wrong input provided")
+
 })
