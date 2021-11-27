@@ -16,5 +16,5 @@ Shape S and the simulated data points (within the shape and outside the shape).
 Plot the area of a shape S by simulating random coordinates in a one by one square.
 }
 \examples{
-plot_area(x = estimate_area())
+plot(x = estimate_area())
 }
