@@ -12,6 +12,13 @@ estimate_area <- function(B = 5000, seed = 10){
   # Control seed
   set.seed(seed)
 
+  # Check inputs
+  if (is.numeric(B) == TRUE & is.numeric(seed) == TRUE){
+
+    if(B%%1 != 0 | B < 1 | seed%%1 != 0 | seed < 1) {
+      stop("Error: wrong inputs provided")
+    } else {
+
   # Simulate B points
   points <- data.frame(
     x = stats::runif(n = B, min = 0, max = 1),
@@ -56,6 +63,10 @@ estimate_area <- function(B = 5000, seed = 10){
 
   return(rval)
 
+    }
+  } else {
+    stop("Error: wrong inputs provided")
+  }
 }
 
 #' @title Plotting of a shape area function

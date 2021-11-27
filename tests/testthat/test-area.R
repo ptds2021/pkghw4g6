@@ -5,7 +5,26 @@ test_that("pkghw4g6 works", {
   expect_visible(plot_shape)
 })
 
-# Test whether the estimate_area function returns a value and the data frame
-test_that("an error message is provided if wrong inputs", {
-
+# Test inputs provided
+test_that("input check", {
+  expect_error(estimate_area(B = 0, seed = 10))
 })
+
+# Test inputs provided
+test_that("input check", {
+  expect_error(estimate_area(B = 1000, seed = 0))
+})
+
+# Test inputs provided
+test_that("input check", {
+  expect_error(estimate_area(B = "group 6", seed = 10))
+})
+
+# Test inputs provided
+test_that("input check", {
+  expect_error(estimate_area(B = 1000, seed = 10))
+})
+
+
+
+
