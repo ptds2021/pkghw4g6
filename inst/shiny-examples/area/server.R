@@ -14,12 +14,11 @@ library(shiny)
 shinyServer(function(input, output) {
 
     simulate <- reactive({
-        inputID <- list(input$B, input$seed)
-        estimate_area(inputID[1], inputID[2])
+        estimate_area(B = input$B, seed = input$seed)
     })
 
     output$plot <- renderPlot({
-        plot(stimate_area(input$B, input$seed))
+        plot(simulate())
     })
 
     output$area <- renderText({
