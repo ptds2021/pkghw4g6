@@ -29,7 +29,7 @@ estimate_area <- function(B = 5000, seed = 10){
   # Create a vector Z and a loop
   Z <- logical()
 
-  for (i in 1:nrow(points)){
+  for (i in 1:B){
 
     x <- points[i,1]
     y <- points[i,2]
