@@ -39,9 +39,9 @@ After that, the function create a vector of Booleans Z such that Zi = TRUE if th
 In the end, the return gives us an estimation of the area.
 
 
-### plot.area
+### plot_area
 
-**plot.area** : This function allows us to visualize the above simulation. 
+**plot_area** : This function allows us to visualize the above simulation. 
 
 The function takes as argument the return of the *estimate_area* function and draws the simulation from the estimated area of the shape. 
 

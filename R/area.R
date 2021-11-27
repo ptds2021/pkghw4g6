@@ -76,7 +76,7 @@ estimate_area <- function(B = 5000, seed = 10){
 #' @export
 #' @examples
 #' plot(x = estimate_area())
-plot <- function(x) {   # x is rval
+plot_area <- function(x) {   # x is rval
 
   x <- estimate_area()
   points <- x[["points"]]

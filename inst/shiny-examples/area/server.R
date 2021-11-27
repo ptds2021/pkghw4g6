@@ -18,7 +18,7 @@ shinyServer(function(input, output) {
     })
 
     output$plot <- renderPlot({
-        plot(simulate())
+        plot_area(simulate())
     })
 
     output$area <- renderText({
