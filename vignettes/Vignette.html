@@ -12,7 +12,7 @@
 
 <meta name="author" content="Virany Kho, Colin Steffe, Guillaume Bilocq, Daniel Welz and Jasmine Mawjee" />
 
-<meta name="date" content="2021-11-27" />
+<meta name="date" content="2021-11-28" />
 
 <title>pkghw4g6</title>
 
@@ -46,7 +46,7 @@
 
 <h1 class="title toc-ignore">pkghw4g6</h1>
 <h4 class="author">Virany Kho, Colin Steffe, Guillaume Bilocq, Daniel Welz and Jasmine Mawjee</h4>
-<h4 class="date">2021-11-27</h4>
+<h4 class="date">2021-11-28</h4>
 
 
 
@@ -62,15 +62,22 @@
 <li>(x-0.5)^2 +(y-0.5)^2 &lt; 0.5^2</li>
 <li>y &gt; x - 0.5</li>
 </ol>
-<p>To do so, the function simulate B numbers of coordinates [Xi, Yi].</p>
-<p>After that, the function create a vector of Booleans Z such that Zi = TRUE if the coordinate is included in the area, and Zi = FALSE otherwise.</p>
+<p>To do so, the function simulates B numbers of coordinates [xi, yi].</p>
+<p>After that, the function creates a vector of Booleans Z such that Zi = TRUE if the coordinates are included in the area and Zi = FALSE otherwise.</p>
 <p>In the end, the return gives us an estimation of the area.</p>
 </div>
 <div id="plot_area" class="section level3">
 <h3>plot_area</h3>
 <p><strong>plot_area</strong> : This function allows us to visualize the above simulation.</p>
-<p>The function takes as argument the return of the <em>estimate_area</em> function and draws the simulation from the estimated area of the shape.</p>
+<p>The function takes as argument the simulated data points generated in the <em>estimate_area</em> function and draws the simulation from the estimated area of the shape.</p>
 <p>Therefore, this function returns no value but plots our shape <em>S</em>.</p>
+</div>
+<div id="shiny-app" class="section level3">
+<h3>Shiny App</h3>
+<p>On the top left of the application, the user can choose the values for the seed and the number of data points to simulate using the slider. Each time values are modified, the right panel will modify the respective plot displaying the shape S and its area represented by the B number of simulated data points.</p>
+<p>Below the plot, the app indicates the estimated area of the shape S and the execution time of the simulation.</p>
+<iframe height="400" width="100%" frameborder="no" src="data:text/html; charset=UTF-8;charset=utf-8,">
+</iframe>
 </div>
 </div>
 

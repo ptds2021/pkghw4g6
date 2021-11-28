@@ -53,5 +53,5 @@ B number of simulated data points.
 
 Below the plot, the app indicates the estimated area of the shape S and the execution time of the simulation. 
 
-
+<iframe height="400" width="100%" frameborder="no" src="https://jasminemawjee.shinyapps.io/area/"> </iframe>
 

@@ -1,4 +1,4 @@
-pkgdown <img src="man/figures/logo.png" align="right" height=76 width=76 /> 
+pkgdown <img src="pkghw4g6/man/figures/logo.png" align="right" height=76 width=76 /> 
 
 area {pkghw4g6}
 
