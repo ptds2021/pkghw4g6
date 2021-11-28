@@ -1,8 +1,0 @@
-install.packages("pkgdown")
-require(devtools)
-usethis::use_pkgdown()
-usethis::use_git()
-usethis::use_github()
-pkgdown::build_site()
-install.packages("devtools"); library(devtools)
-devtools::install_github("amirmasoudabdol/preferably")
