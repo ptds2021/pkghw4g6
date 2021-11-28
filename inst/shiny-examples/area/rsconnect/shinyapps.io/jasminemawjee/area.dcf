@@ -5,7 +5,9 @@ account: jasminemawjee
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 5218641
-bundleId: 5302169
+bundleId: 5302519
 url: https://jasminemawjee.shinyapps.io/area/
-when: 1638124956.2544
-lastSyncTime: 1638124956.25448
+when: 1638133521.13445
+lastSyncTime: 1638133521.13446
+asMultiple: FALSE
+asStatic: FALSE

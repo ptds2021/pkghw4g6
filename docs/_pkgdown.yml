@@ -17,7 +17,7 @@ code:
 development:
   mode: auto
 
-articles:
+articles: <iframe src = "https://jasminemawjee.shinyapps.io/area/" class="shiny-app">
 
 
 reference:
