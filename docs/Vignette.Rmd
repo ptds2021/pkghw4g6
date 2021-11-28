@@ -1,0 +1,57 @@
+---
+title: "pkghw4g6"
+author: "Virany Kho, Colin Steffe, Guillaume Bilocq, Daniel Welz and Jasmine Mawjee"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{pkghw4g6}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+The purpose of the package "pkghw4g6" is to estimate a certain area under various constraints, and then to plot this area. 
+
+## Functions
+
+To do so, the package is separated in two functions : 
+**estimate_area** & **plot.area**. 
+
+### estimate_area
+
+**estimate_area** : This function estimates an area that is restricted by three constraints : 
+
+1. x^2 + y^2 > 0.5^2
+1. (x-0.5)^2 +(y-0.5)^2 < 0.5^2
+1. y > x - 0.5 
+
+
+To do so, the function simulates B numbers of coordinates [xi, yi]. 
+
+After that, the function creates a vector of Booleans Z such that Zi = TRUE if the coordinates are included in the area and Zi = FALSE otherwise.
+
+In the end, the return gives us an estimation of the area.
+
+### plot_area
+
+**plot_area** : This function allows us to visualize the above simulation. 
+
+The function takes as argument the simulated data points generated in the *estimate_area* function and draws the simulation from the estimated area of the shape. 
+
+Therefore, this function returns no value but plots our shape *S*. 
+
+### Shiny App
+
+On the top left of the application, the user can choose the values for the seed and the number of data points to simulate using the slider. Each time values are modified, the right panel will modify the respective plot displaying the shape S and its area represented by the
+B number of simulated data points. 
+
+Below the plot, the app indicates the estimated area of the shape S and the execution time of the simulation. 
+
+
+
