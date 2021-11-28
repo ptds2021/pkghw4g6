@@ -35,12 +35,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
 <script src="pkgdown.js"></script><meta property="og:title" content="Homework - Group six R package">
-<meta property="og:description" content="The package estimates the area of a shape S and plots the shape. 
-    To estimate the area of the shape, the function estimate_area() simulates B random data points (or coordinates (x,y)) 
+<meta property="og:description" content="The package estimates the area of a shape S and plots the shape.
+    To estimate the area of the shape, the function estimate_area() simulates B random data points (or coordinates (x,y))
     in a one by one square and assigns to each data point a value TRUE or FALSE whether it falls within the lines
     of the shape (i.e. within contraints) or not. Using the data points for which the assigned value is TRUE,
-    we estimate the area of the shape by summing all TRUE values and divide them by the total number of data points 
-    (i.e. B parameter). Once the area is estimated and returned, the plot_area() function takes the value as only argument 
+    we estimate the area of the shape by summing all TRUE values and divide them by the total number of data points
+    (i.e. B parameter). Once the area is estimated and returned, the plot_area() function takes the value as only argument
     to plot the shape (using the constraints) and the data points. Data points which have a value TRUE (i.e lie within the shape)
     are in red and data points which have a value FALSE (i.e. lie outside the shape) are in blue.">
 <meta property="og:image" content="https://ptds2021.github.io/pkghw4g6/logo.png">
@@ -71,7 +71,7 @@
 <li>
   <a href="index.html">
     <span class="fas fa-home fa-lg"></span>
-     
+
   </a>
 </li>
 <li>
@@ -87,10 +87,10 @@
             <span class="fas fa-adjust fa-lg"></span>
           </a>
         </li>
-        
-        
-        
-        
+
+
+
+
 
 
       </ul>
@@ -101,7 +101,7 @@
 </div>
 <!--/.navbar -->
 
-      
+
 
       </header><div class="row">
   <div class="contents col-md-9">
@@ -117,7 +117,7 @@
 <a href="#estimate_are-function" class="anchor"></a>estimate_are() function</h2>
 <p>First, it uses a function estimate_area() that takes two arguments:</p>
 <ul>
-<li>B: number of random data points (i.e. coordinates (x,y))</li>
+<li>B: number of random data points (i.e. coordinates (x,y))</li>
 <li>seed: random number generator (for reproducibility)</li>
 </ul>
 <p>This function simulate B coordinates and stores them in a data frame of three columns: x, y and inside in which the third column indicates whether data points lie within the shape’s limits or not (TRUE or FALSE).</p>
@@ -127,7 +127,7 @@
 <li>constraint 2: (x-0.5)^2 +(y-0.5)^2 &lt; 0.5^2</li>
 <li>constraint 3: y &gt; x - 0.5</li>
 </ul>
-<p>Once the data points are simulated and have a logical value (TRUE or FALSE) assigned, the function returns the estimated return value (i.e. area of the shape) by summing up all TRUE values and divide it by the total number of simulated data points B. The return value is stored in a list containing the returned estimated values and all data points.</p>
+<p>Once the data points are simulated and have a logical value (TRUE or FALSE) assigned, the function returns the estimated return value (i.e. area of the shape) by summing up all TRUE values and divide it by the total number of simulated data points B. The return value is stored in a list containing the returned estimated values and all data points.</p>
 </div>
 <div id="plot_area-function" class="section level2">
 <h2 class="hasAnchor">
@@ -175,7 +175,7 @@
       </footer>
 </div>
 
-  
+
 
 
   </body>
