@@ -5,5 +5,7 @@ articles:
   Vignette: Vignette.html
 template:
   package: preferably
+  params:
+    toggle: manual
 last_built: 2021-11-28T15:17Z
 
