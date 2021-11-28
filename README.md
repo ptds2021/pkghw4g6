@@ -1,3 +1,5 @@
+pkgdown <img src="man/figures/logo.png" align="right" height=76 width=76 /> 
+
 area {pkghw4g6}
 
 # Estimate and plot the area of a shape
