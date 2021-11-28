@@ -1,11 +1,14 @@
 pandoc: 2.11.4
 pkgdown: 1.6.1
 pkgdown_sha: ~
-articles:
-  Vignette: Vignette.html
-template:
-  package: preferably
-  params:
-    toggle: manual
+url: https://ptds2021.github.io/pkghw4g6/
+
+navbar:
+    template:
+       package: preferably
+       params:
+           toggle: manual
+    articles:
+       Vignette: Vignette.html
 last_built: 2021-11-28T15:17Z
 
